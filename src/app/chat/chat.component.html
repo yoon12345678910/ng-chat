@@ -22,15 +22,14 @@
     </mat-list>
     <div class="chat-footer-container">
       <mat-icon>message</mat-icon>
-      <!-- <mat-form-field class="chat-input">
+      <mat-form-field class="chat-input">
         <input matInput
           #inputMessage
           maxlength="140"
-          placeholder="{{'Type your message' | translate}}"
           [(ngModel)]="messageContent"
           (keyup.enter)="sendMessage(messageContent)">
         <mat-hint align="end">{{inputMessage.value.length}}/140</mat-hint>
-      </mat-form-field> -->
+      </mat-form-field>
     </div>
   </mat-card>
 </div>

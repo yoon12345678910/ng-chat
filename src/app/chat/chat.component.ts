@@ -2,10 +2,10 @@ import { Component, OnInit, ViewChildren, ViewChild, AfterViewInit, QueryList, E
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatList, MatListItem } from '@angular/material/list';
 
-// import { Action } from './shared/model/action';
-// import { Event } from './shared/model/event';
-// import { Message } from './shared/model/message';
-// import { User } from './shared/model/user';
+import { Action } from './shared/model/action';
+import { Event } from './shared/model/event';
+import { Message } from './shared/model/message';
+import { User } from './shared/model/user';
 // import { SocketService } from './shared/services/socket.service';
 // import { DialogUserComponent } from './dialog-user/dialog-user.component';
 // import { DialogUserType } from './dialog-user/dialog-user-type';
@@ -17,6 +17,11 @@ import { MatList, MatListItem } from '@angular/material/list';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit, AfterViewInit {
+  action = Action;
+  user: User;
+  messages: Message[] = [];
+  messageContent: string;
+  ioConnection: any;
 
   constructor() { }
 
@@ -26,6 +31,19 @@ export class ChatComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit')
+  }
+
+  public sendMessage(message: string): void {
+    if (!message) {
+      return;
+    }
+
+    // this.socketService.send({
+    //   from: this.user,
+    //   content: message
+    // });
+    console.log('message', message)
+    this.messageContent = null;
   }
 
 }
