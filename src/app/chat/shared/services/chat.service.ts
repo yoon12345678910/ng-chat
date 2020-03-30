@@ -1,9 +1,8 @@
-  
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Observer } from 'rxjs';
-import { Message } from '../model/message';
-import { Event } from '../model/event';
+import { Injectable } from "@angular/core";
+// import { Observable } from "rxjs";
+// import { Observer } from "rxjs";
+import { Message } from "../model/message";
+// import { Event } from "../model/event";
 
 // import * as socketIo from 'socket.io-client';
 
@@ -17,9 +16,9 @@ export class ChatService {
     this.messages.push(message);
   }
 
-  public onMessage(): Observable<Message> {
-  }
+  // public onMessage(): Observable<Message> {
+  // }
 
-  public onEvent(event: Event): Observable<any> {
-  }
+  // public onEvent(event: Event): Observable<any> {
+  // }
 }
